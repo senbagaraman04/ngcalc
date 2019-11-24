@@ -1,34 +1,27 @@
-<div class="calculator">
-
-    <input type="text" class="calculator-screen" value="0" disabled />
-    
-    <div class="calculator-keys">
-      
-      <button type="button" class="operator" value="+">+</button>
-      <button type="button" class="operator" value="-">-</button>
-      <button type="button" class="operator" value="*">&times;</button>
-      <button type="button" class="operator" value="/">&divide;</button>
-  
-      <button type="button" value="7">7</button>
-      <button type="button" value="8">8</button>
-      <button type="button" value="9">9</button>
-  
-  
-      <button type="button" value="4">4</button>
-      <button type="button" value="5">5</button>
-      <button type="button" value="6">6</button>
-  
-  
-      <button type="button" value="1">1</button>
-      <button type="button" value="2">2</button>
-      <button type="button" value="3">3</button>
-  
-  
-      <button type="button" value="0">0</button>
-      <button type="button" class="decimal" value=".">.</button>
-      <button type="button" class="all-clear" value="all-clear">AC</button>
-  
-      <button type="button" class="equal-sign" value="=">=</button>
-  
+<div class="calc">
+    <div class ="form-group">
+        First Number  :<input [(ngModel)]='firstNumber' type="number" name="firstNumber" class="form-control" aria-valuetext="Enter the first number"> <br/><br/>
+        Second Number :<input [(ngModel)]='secondNumber' type="number" name="secondNumber" class="form-control" aria-valuetext="Enter the second number">
     </div>
-  </div>
+    <div class="button">
+        <br>
+       <button class="btn btn-success" (click)=addition()>Addition</button>&nbsp;
+       <button class="btn btn-success" (click)=subtraction()>Subtraction</button>&nbsp;
+       <button class="btn btn-success" (click)=division()>Division</button>&nbsp;
+       <button class="btn btn-success" (click)=multiplication()>Multiplication</button>&nbsp;
+
+        <br><br><br>
+    </div>
+    <div class="operation">
+        <hr>
+        <h4>Operation Performed:</h4>
+        <h5>First Number: {{firstNumber}}</h5>
+        <h5>Second Number: {{secondNumber}}</h5>
+        <h5>Chosen Operator: {{operatorName}}</h5>
+        <hr>
+    </div>
+    <div class="answer">
+
+            <h4>You result:</h4><h5 class="blink">{{result}}</h5>
+    </div>       
+    </div>
